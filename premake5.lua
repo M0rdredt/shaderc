@@ -18,8 +18,9 @@ project "shaderc"
 		"libshaderc_util/src/shader_stage.cc",
 		"libshaderc_util/src/spirv_tools_wrapper.cc",
 		"libshaderc_util/src/version_profile.cc",
-
 		"libshaderc_util/include/libshaderc_util/**.h",
+		"third_party/spirv-tools/source/**.cpp",
+		"third_party/spirv-tools/source/**.h"
 	}
 
 	includedirs
@@ -28,7 +29,10 @@ project "shaderc"
 		"libshaderc/include",
 		"third_party/glslang",
 		"third_party/spirv-tools/include",
-		"third_party/spirv-headers/include"
+		"third_party/spirv-headers/include",
+		"third_party/spirv-tools",
+		"third_party/spirv-headers/include/spirv/unified1"
+
 	}
 
 	defines{"ENABLE_HLSL"}
